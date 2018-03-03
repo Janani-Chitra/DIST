@@ -1,0 +1,182 @@
+<% include partials/header %>
+
+<div class="w3-container" >
+ <p id="rcorners2">
+   
+   <!--<marquee>Important links can be displayed here!</marquee>-->
+ </p>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 imgdiv" >
+  	  <div class="w3-third" style="width: 100%">
+        <div class="w3-card w3-container" style="min-height:460px">
+          <div style="overflow:scroll; height:460px;  ">
+             <center>
+             	<h3><font color="#DF5881">IST At a Glance!</font></h3><br>
+             </center>
+  
+             <P ><font color="#DF5881"> Anna University Chennai </font>is a leading technical University in India located at Chennai, Tamil Nadu.<b> <font color="#DF5881">Department of Information Science & Technology (IST)</font></b> was carved out of the , Department of Computer Science and Engineering in May 2010.</p>
+             <P>The Department functions under the Faculty of Information and Communication Engineering.  <font color="#DF5881" style="font-family:Arial;"><br><b>Dr. Saswati Mukherjee,</b></font> is currently the Head of the Department. IST function as one of the University Department having academic autonomy of having its own syllabus and curriculum. It offers  undergraduate, postgraduate and research programmes in various disciplines of Information Technology,Multimedia & MCA Degree Programme. </p>
+             <p>In addition, the Department conducts <b><font color="#DF5881">CISCO Ceritified CCNA</font></b> Programme for Engineering Graduates. CISCO Systems works with educational organizations to train students and instructors on the latest networking technologies.Anna University is one of the Regional Academy which offer CCNA Exploration & Discovery Training programme for the Local Academies Instructors and students, provide support to Local Academies within the region.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-md-4 ">
+      <div class="w3-card w3-container imgdiv" id="grad1" style="min-height:460px" style="background-color:#d1e0e0;height: 400px; width: 400px;">
+        <!--  <div style="background-color:#d1e0e0;height: 400px; width: 400px;"> -->
+            
+              
+                <!--<marquee style="height:inherit" direction="up" scrollamount="3%">-->
+                <!-- <p >Circular and Announcements can be displayed here</p>-->
+                <!--  <p > Information to Students</p>-->
+                <!--   <p >List of upcoming events</p>-->
+                <!--  <p > Exam Schedule</p>-->
+                <!--</marquee>-->
+             
+          
+          <!-- </div> -->
+      </div>
+  </div>
+  <div class="col-xs-12 col-md-4 imgdiv ">
+  	   
+     <div class="login_heading">
+      <p class="login_text" onclick="togglePanel('login_content','login_heading')">
+      	<i class="fa fa-sign-in" aria-hidden="true"></i> Staffs Sessions
+      <span class="right glyphicon glyphicon-chevron-right pull-right"></span>
+      <span class="down glyphicon glyphicon-chevron-down pull-right"></span>
+      </p>
+    </div>
+              <% if (message.length > 0) { %>
+                <div class="alert alert-danger"><%= message %></div>
+            <% } %>
+    
+<form method="POST" action="/login">
+  
+    <div class="login_content pink">
+      <div class="form-group username"><br>
+          <label for="inputdefault">Username</label>
+          <input class="form-control username_box" name="username"id="inputdefault" type="text">
+      </div>
+    
+
+      <div class="form-group username">
+          <label for="inputdef">Password</label>
+          <input class="form-control username_box" name="password" id="inputdef" type="password">
+      </div>
+      
+
+      <button type="submit" style="margin-right:47px ;background-color:#f9f9f9; color: #DF5881;" class="btn btn-primary pull-right" >Sign in</button><br>
+      <a href="/forgot" class="forgot">Forgot Password?</a>
+      </div>
+    </form>
+  <!-- </div> -->
+
+    <div class="academics white">
+      <p class="academic_text " onclick="togglePanel('academics_content','academics')"><i class="fa fa-graduation-cap" aria-hidden="true"></i> ACADEMICS
+        <span class="right glyphicon glyphicon-chevron-right pull-right"></span>
+        <span class="down glyphicon glyphicon-chevron-down pull-right"></span>
+      </p>
+    </div>
+
+    <div class="academics_content white">
+
+        <p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/courses/0" style="font-weight:bold">UG & PG Regulations</a> <br>
+       
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold">T & L </a><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ICIITPhotoGallery/" target="_blank" style="font-weight:bold">ICIIT 2017 Gallery</a></p>
+
+
+    </div>
+
+    <div class="app pink">
+      <p class="app_text" onclick="togglePanel('app_content','app')"><i class="fa fa-sign-in" aria-hidden="true"></i> Student Session
+        <span class="right glyphicon glyphicon-chevron-right pull-right"></span>
+        <span class="down glyphicon glyphicon-chevron-down pull-right"></span>
+      </p>
+    </div>
+
+    <div class="app_content pink">
+      <form method="POST" action="/login">
+        
+      <div class="form-group username"><br>
+          <label for="inputdefault">Username</label>
+          <input class="form-control username_box" name="username"id="inputdefault" type="text">
+      </div>
+    
+
+      <div class="form-group username">
+          <label for="inputdef">Password</label>
+          <input class="form-control username_box" name="password" id="inputdef" type="password">
+      </div>
+      <center>
+      <table>
+        <tr>
+      <td> <button type="submit" style="margin-right:47px ;background-color:#f9f9f9; color: #DF5881;" class="btn btn-primary pull-right" >Sign up</button><br></td>
+      <td><button type="submit" style="margin-right:47px ;background-color:#f9f9f9; color: #DF5881;" class="btn btn-primary pull-right" >Sign in</button><br></td>
+      </tr></table></center>
+      <a href="#" class="forgot">Forgot Password?</a>
+      
+        </form>
+      
+        
+
+    </div>
+
+    <div class="gallery white">
+      <p class="gallery_text" onclick="togglePanel('gallery_content','gallery')"> <i class="fa fa-picture-o" aria-hidden="true"></i>PHOTO GALLERY
+        <span class="right glyphicon glyphicon-chevron-right pull-right"></span>
+        <span class="down glyphicon glyphicon-chevron-down pull-right"></span>
+      </p>
+    </div>
+
+    <div class="gallery_content white">
+      <center><a href="/photos/"target="_blank"><img src="gallery-icon.png" class="image_1"></img></a></center>
+
+    </div>
+
+    <div class="des pink">
+      <p class="des_text" onclick="togglePanel('des_content','des')"><i class="fa fa-user-circle" aria-hidden="true"></i> DEPT DESK
+        <span class="right glyphicon glyphicon-chevron-right pull-right"></span>
+        <span class="down glyphicon glyphicon-chevron-down pull-right"></span>
+      </p>
+    </div>
+
+    <div class="des_content pink">
+
+        <p><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold">DEPT PROJECTS</a> <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="\HODdesk" style="font-weight:bold">HOD DESK</a> <br>
+      </p>
+
+    </div>
+
+    <div class="feed white">
+      <p class="feed_text" onclick="togglePanel('feed_content','feed')"><i class="fa fa-comments" aria-hidden="true"></i> FEEDBACK & SUGGESTION
+        <span class="right glyphicon glyphicon-chevron-right pull-right"></span>
+        <span class="down glyphicon glyphicon-chevron-down pull-right"></span>
+      </p>
+    </div>
+
+    <div class="feed_content white">
+
+        <p><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/intercom" style="font-weight:bold">DEPT INTERCOM</a> <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold">STUDENTS MAIL ID</a> <br>
+      </p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+
+<% include partials/footer %>

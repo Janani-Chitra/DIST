@@ -1,0 +1,56 @@
+<!-- views/signup.ejs -->
+<!doctype html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/i.jpg" />
+	<title>Reset Password</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<style>
+		body 		{ padding-top:80px; }
+	</style>
+</head>
+<body>
+<div class="container">
+
+<div class="col-sm-6 col-sm-offset-3">
+
+	<h1><span class="fa fa-sign-in"></span> Change Password</h1>
+	
+
+	<!-- LOGIN FORM -->
+	<form action="/changePass" method="post">
+	      <% if (data.length > 0) { %>
+        <div class="alert alert-success col-sm-12"><%= data %></div>
+                            <% } %>
+		<div class="form-group">
+			<label>Old Password</label>
+			<input type="password" class="form-control" name="opassword">
+		</div>
+		<div class="form-group">
+			<label>New Password</label>
+			<input type="password" class="form-control" name="npassword">
+		</div>
+		<div class="form-group">
+			<label>Confirm Password</label>
+			<input type="password" class="form-control" name="cpassword">
+		</div>
+		<div class="form-group">
+			
+			<input type="hidden" class="form-control" name="id" value="<%=id %>">
+		</div>
+		
+
+		<button type="submit" class="btn btn-warning btn-lg">submit</button>
+	</form>
+
+	<hr>
+
+	
+	<p>Or go <a href="/profile1">profile</a>.</p>
+
+</div>
+
+</div>
+</body>
+</html>

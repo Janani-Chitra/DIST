@@ -1,0 +1,177 @@
+<% include partials/header %>
+<style type="text/css">
+ .proimg{
+   width:100px;
+   height: 100px;
+   
+ } 
+ 
+</style>
+	<h4 align=left ><font color="#B54691" >  <strong>Welcome</strong>:</font> <font color="#F05F7A"><%= user.name %> </font></h4>
+	
+	
+<div class="row">
+    <div class="col-xs-12 col-md-8 imgdiv" >
+      	
+      		
+      		<center>
+
+      
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " >
+   
+   
+          <div class="panel panel-info white">
+            <!--<div class="panel-heading pink">-->
+            <!--  <h3 class="panel-title "><font color="white" size="5px">WELCOME <%= user.name %></font></h3>-->
+            <!--</div>-->
+            <div class="panel-body ">
+              
+                <div class="col-md-3 col-lg-3 " align="center">
+                     <img  src="/images/upload_images/<%= user.image%>" class="img-circle img-responsive"> 
+                </div>
+                
+                
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information tab table-hover ">
+                    <tbody>
+                    <tr>
+                        <td>Name:</td>
+                        <td><%= user.name %></td>
+                      </tr>
+                      <tr>
+                        <td>Designation:</td>
+                        <td><%= user.designation %></td>
+                      </tr>
+                      <tr>
+                        <td>Experience:</td>
+                        <td><%= user.experience %></td>
+                      </tr>
+                      
+                   
+                         <tr>
+                           
+                        <tr>
+                        <td>Area Of Expertise</td>
+                        <td><%= user.area_of_exper %></td>
+                      </tr>
+                      <tr>
+                        <td>Email</td>
+                        <td><%=user.email %></td>
+                      </tr>
+                      <tr>
+                        <td>Phone Number</td>
+                        <td><%= user.mobile_no %>
+                        </td>
+                           
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+                  
+                  
+                  
+                </div>
+              
+            </div>
+                 
+            
+          </div>
+        </div>
+   
+</center>
+
+
+
+    </div>
+    
+    <div class="col-xs-12 col-md-4 imgdiv" >
+        <div class="login_heading">
+      <p class="login_text" onclick="togglePanel('login_content','login_heading')">
+      	 STAFFS CORNERS
+      <span class="right glyphicon glyphicon-chevron-right pull-right"></span>
+      <span class="down glyphicon glyphicon-chevron-down pull-right"></span>
+      </p>
+    </div>
+    
+
+    <div class="login_content pink">
+       <p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=/staffs_pro/<%= user.id%> style="font-weight:bold">View Profile</a> <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/edit/<%= user.id%>" style="font-weight:bold">Edit Profile</a> <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/editedu/<%= user.id%>" style="font-weight:bold">Edit Educational details</a> <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/changePass/<%= user.id%>" style="font-weight:bold">Change Password</a> </a><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/logout" style="font-weight:bold">Logout</a></p>
+
+      
+    </div>
+  <!-- </div> -->
+
+    <div class="academics white">
+      <p class="academic_text " onclick="togglePanel('academics_content','academics')"> LEAVE DETAILS
+        <span class="right glyphicon glyphicon-chevron-right pull-right"></span>
+        <span class="down glyphicon glyphicon-chevron-down pull-right"></span>
+      </p>
+    </div>
+
+    <div class="academics_content white">
+
+        <p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold">Apply Leave</a> <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold">Leave Details</a> <br>
+
+
+    </div>
+
+    <div class="app pink">
+      <p class="app_text" onclick="togglePanel('app_content','app')">CIRCULARS
+        <span class="right glyphicon glyphicon-chevron-right pull-right"></span>
+        <span class="down glyphicon glyphicon-chevron-down pull-right"></span>
+      </p>
+    </div>
+
+    <div class="app_content pink">
+      <p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold" class="text-muted">Staff Circular</a> <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold" class="text-muted">Search a Circular</a> <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold" class="text-muted">Send a Circular</a> </a><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold" class="text-muted">Send a Student Circular</a></p>
+
+    </div>
+   
+
+    <div class="gallery white">
+      <p class="gallery_text" onclick="togglePanel('gallery_content','gallery')">  ACADEMICS I
+        <span class="right glyphicon glyphicon-chevron-right pull-right"></span>
+        <span class="down glyphicon glyphicon-chevron-down pull-right"></span>
+      </p>
+    </div>
+
+    <div class="gallery_content white">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="localhost:8080/istlib/index.jsp" target="_blank" style="font-weight:bold">Department Library</a>
+      <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold" class="text-muted">Department Project Form</a> <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold" class="text-muted">Assesment Schedule</a> </a><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold" class="text-muted">Academic Incharge</a></p>
+        
+    </div>
+
+     <div class="des pink">
+      <p class="des_text" onclick="togglePanel('des_content','des')"> ACADEMICS II     
+        <span class="right glyphicon glyphicon-chevron-right pull-right"></span>
+        <span class="down glyphicon glyphicon-chevron-down pull-right"></span>
+      </p>
+    </div>
+
+    <div class="des_content pink">
+
+        <p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold" class="text-muted">Course Information</a> </a><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold" class="text-muted">Project Comm.Members</a></p>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold" class="text-muted">Project Review</a> </a><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-weight:bold" class="text-muted">View Project Details</a></p>
+
+    </div>
+
+    
+    </div>
+    
+    
+</div>
+
+<% include partials/footer %>

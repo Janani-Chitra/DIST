@@ -1,0 +1,47 @@
+<!-- views/signup.ejs -->
+<!doctype html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/i.jpg" />
+	<title>Reset Password</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<style>
+		body 		{ padding-top:80px; }
+	</style>
+</head>
+<body>
+<div class="container">
+
+<div class="col-sm-6 col-sm-offset-3">
+
+	<h1><span class="fa fa-sign-in"></span> Reset Password</h1>
+
+<p>Provide your Email Id to reset your password..</p>
+	<!-- LOGIN FORM -->
+	<form action="/forgot" method="post">
+	      <% if (data.length > 0) { %>
+        <div class="alert alert-success col-sm-12"><%= data %></div>
+                            <% } %>
+		<div class="form-group">
+			<label>Email</label>
+			<input type="text" class="form-control" name="email">
+		</div>
+		<!--<div class="form-group">-->
+		<!--	<label>New Password</label>-->
+		<!--	<input type="password" class="form-control" name="password">-->
+		<!--</div>-->
+
+		<button type="submit" class="btn btn-warning btn-lg">submit</button>
+	</form>
+
+	<hr>
+
+	
+	<p>Or go <a href="/">home</a>.</p>
+
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+
+<!doctype html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/i.jpg" />
+	<title>Signup</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<!--<style>-->
+	<!--	body 		{ padding-top:80px; }-->
+	<!--</style>-->
+</head>
+<body>
+
+ <div class="container col-sm-12" id="mainform">
+            <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                                     
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title"><span class="fa fa-sign-in"></span> Register</div>
+                    </div> 
+                    <div class="panel-body" >
+                        <form class="form-horizontal" role="form" method="post" action="/signup" enctype="multipart/form-data">
+                            <% if (message.length > 0) { %>
+                                <div class="alert alert-success col-sm-12"><%= message %></div>
+                            <% } %>
+                            <div id="signupalert" style="display:none" class="alert alert-danger">
+                                <p>Error:</p>
+                                <span></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="sid" class="col-md-3 control-label">StaffId</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="sid" placeholder="Staff ID">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-md-3 control-label">FullName</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="name" placeholder="Name">
+                                </div>
+                            </div>
+                              <div class="form-group">
+                                <label for="mno" class="col-md-3 control-label">ContactNo</label>
+                                <div class="col-md-9">
+                                    <input type="number" class="form-control" name="mno" placeholder="ContactNo">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="mob_no" class="col-md-3 control-label">Profile Image</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" type="file" name="uploaded_image" accept=""/>
+                                </div>
+                            </div>  
+                             <div class="form-group">
+                                <label for="exp" class="col-md-3 control-label">Experience</label>
+                                <div class="col-md-9">
+                                    <input type="number" class="form-control" name="exp" placeholder="Experience">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="desg" class="col-md-3 control-label">Designation</label>
+                                <div class="col-md-9" class="form-control">
+                                    <input type="radio"  name="desg"  value="Head of the department"> Hod <br>
+                                   <input type="radio"  name="desg" value="Professor"> Professor <br>
+                                    <input type="radio"  name="desg"  value="Associate Professor"> Associate Professor <br>
+                                   <input type="radio"  name="desg" value="Assistant Professor (Senior Grade)" > Assistant Professor (Senior Grade) <br>
+                                   <input type="radio"  name="desg" value="Assistant Professor" > Assistant Professor <br>
+                                    <input type="radio"  name="desg" value="Teaching Fellow"> Teaching Fellow <br>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-md-3 control-label">Email</label>
+                                <div class="col-md-9">
+                                    <input type="email" class="form-control" name="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="aoe" class="col-md-3 control-label">Area Of Expertise</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="aoe" placeholder="Area Of Expertise">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="aoe" class="col-md-3 control-label">Publications</label>
+                                <div class="col-md-9">
+                                    <textarea  class="form-control" name="pub" rows="4" > </textarea>
+                                </div>
+                            </div>
+                            <p>Details for Staffs Login purpose..!!</p>
+                            <div class="form-group">
+                                <label for="username" class="col-md-3 control-label">Username</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="username" placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-3 control-label">Password</label>
+                                <div class="col-md-9">
+                                    <input type="password" class="form-control" name="password" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Button -->                                       
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Register</button>
+                                </div>
+                            </div>  
+                        </form>
+                     </div>
+                </div>
+            </div>
+        </div>
+        </body>
+        </html>

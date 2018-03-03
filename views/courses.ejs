@@ -1,0 +1,73 @@
+<% include partials/header %>
+<style type="text/css">
+/*footer*/
+/*{*/
+/*    position:fixed;*/
+/*   left:0px;*/
+/*   bottom:0px;*/
+/*    padding:10px !important;*/
+/*   width :100%;*/
+/*}*/
+
+
+
+.panel
+{
+margin-top:25px;
+width:55% !important;
+font-size : 20px;
+}
+</style>
+<center>
+<div class="container tab">
+<% if(mes == 1 || mes==0) {%>
+        <div class="panel panel-default  " >
+          <div class="panel-heading pink">
+         <font color="white">  B.TECH(IT) </font>
+          </div>
+          <div class="panel-body white">
+         <li> <a href="/reg">Regulation : 2013</a></li>
+         
+          </div>
+        </div>
+   <%}%> 
+    
+<% if(mes == 2 || mes==0) {%>    
+        <div class="panel panel-default">
+          <div class="panel-heading pink">
+         <font color="white">  M.TECH(IT)</font>
+          </div>
+          <div class="panel-body white">
+         <li> <a href="/reg">Regulation : 2013</a></li>
+         <li> <a href="/reg">Regulation : 2013</a></li>
+          </div>
+        </div>
+   <%}%> 
+   
+    <% if(mes == 3 || mes==0) {%>    
+        <div class="panel panel-default">
+          <div class="panel-heading pink">
+         <font color="white">  M.E(MM)</font>
+          </div>
+          <div class="panel-body white">
+          <li> <a href="/reg">Regulation : 2013</a></li>
+          </div>
+        </div>
+        <%}%> 
+        
+    <% if(mes == 4 || mes==0) {%>    
+        <div class="panel panel-default">
+          <div class="panel-heading pink">
+          <font color="white"> MCA(Reg & SS)</font>
+          </div>
+          <div class="panel-body white">
+          <li> <a href="/reg">Regulation : 2013</a></li>
+          <li> <a href="/reg">Regulation : 2013</a></li>
+          </div>
+        </div>
+    <%}%> 
+    
+</div>
+</center>
+
+<% include partials/footer %>

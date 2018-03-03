@@ -1,0 +1,121 @@
+
+<!doctype html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/i.jpg" />
+	<title>Signup</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<!--<style>-->
+	<!--	body 		{ padding-top:80px; }-->
+	<!--</style>-->
+</head>
+<body>
+
+ <div class="container col-sm-12" id="mainform">
+            <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                                     
+                <div class="panel panel-info">
+                    <div class="panel-heading ">
+                        <div class="panel-title"><span class="fa fa-sign-in"></span> Register</div>
+                    </div> 
+                    <div class="panel-body" >
+                        <form class="form-horizontal" role="form" method="post" action="/signup" enctype="multipart/form-data">
+                            
+                            <div id="signupalert" style="display:none" class="alert alert-danger">
+                                <p>Error:</p>
+                                <span></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="rno" class="col-md-3 control-label">Register Number</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="rno" placeholder="Register Number">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-md-3 control-label">FullName</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="name" placeholder="Name">
+                                </div>
+                            </div>
+                              
+                            <div class="form-group">
+                                <label for="regu" class="col-md-3 control-label">Regulation</label>
+                                <div class="col-md-9" class="form-control">
+                                    <input type="radio"  name="regu" value="r2013"> R2013 <br>
+                                    <input type="radio"  name="regu"  value="r2015(cbcs)"> R2015 (CBCS) <br>
+                                   <input type="radio"  name="regu" value="r2016"> R2016 <br>
+                                   </div>
+                            </div>
+                             <div class="form-group">
+                                <label for="batch" class="col-md-3 control-label">Batch</label>
+                                <div class="col-md-9">
+                                    <!--<input type="year" class="form-control" name="batch" placeholder="Year of passing">-->
+                                    <SCRIPT LANGUAGE="JavaScript">
+
+<!-- 
+                                      var time = new Date();
+                                      var year = time.getYear();
+                                      if (year < 1900) {
+                                      year = year + 1900;
+                                        }
+                                        
+                                      var date = year; /*change the '101' to the number of years in the past you want to show */
+                                      var future = year + 100; /*change the '100' to the number of years in the future you want to show */ 
+                                      document.writeln ("<SELECT><OPTION value=\"\">Year");
+                                      do {
+                                     
+                                     document.write ("<OPTION value=\"" +date+"\">" +date+ "");
+                                     date++;
+                                      }
+                                     while (date < future)
+                                     document.write ("</SELECT>");
+//   -->
+
+</script>
+
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="branch" class="col-md-3 control-label">Branch</label>
+                                <div class="col-md-9" class="form-control">
+                                   <!-- <input type="radio"  name="branch"  value="BTech IT"> BTech IT <br>-->
+                                   <!--<input type="radio"  name="branch" value="MTech IT"> MTech ITr <br>-->
+                                   <!-- <input type="radio"  name="branch"  value="ME (MM)"> ME (MM)<br>-->
+                                   <!--<input type="radio"  name="branch" value="MCA" > MCA <br>-->
+                                   
+                                   <select name="branch">
+                                      <option value="BTech IT"> BTech IT</option>
+                                      <option value="MTech IT"> MTech IT</option>
+                                      <option  value="ME (MM)"> ME (MM)</option>
+                                      <option  value="MCA" > MCA </option>
+                                   </select>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-md-3 control-label">Email</label>
+                                <div class="col-md-9">
+                                    <input type="email" class="form-control" name="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-3 control-label">Password</label>
+                                <div class="col-md-9">
+                                    <input type="password" class="form-control" name="password" placeholder="Password">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <!-- Button -->                                       
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Register</button>
+                                </div>
+                            </div>  
+                        </form>
+                     </div>
+                </div>
+            </div>
+        </div>
+        </body>
+        </html>

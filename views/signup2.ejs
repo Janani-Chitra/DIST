@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/i.jpg" />
+	<title>Signup</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<!--<style>-->
+	<!--	body 		{ padding-top:80px; }-->
+	<!--</style>-->
+</head>
+<body>
+
+ <div class="container col-sm-12" id="mainform">
+            <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                                     
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title"><span class="fa fa-sign-in"></span> Add Details</div>
+                    </div> 
+                    <div class="panel-body" >
+                        <form class="form-horizontal" role="form" method="post" action="/signup2" enctype="multipart/form-data">
+                           <% if (data.length > 0) { %>
+                                <div class="alert alert-success col-sm-12"><%= data %></div>
+                            <% } %>
+                            <div id="signupalert" style="display:none" class="alert alert-danger">
+                                <p>Error:</p>
+                                <span></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="sid" class="col-md-3 control-label">StaffId</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="sid" placeholder="Staff ID">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="deg" class="col-md-3 control-label">Degree</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="deg" placeholder="Degree">
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="spec" class="col-md-3 control-label">Specialization</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="spec" placeholder="Specialization">
+                                </div>
+                                </div>
+                              <div class="form-group">
+                                <label for="univ" class="col-md-3 control-label">Name of University</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="univ" placeholder="Name of University">
+                                </div>
+                            </div>
+                              
+                             <div class="form-group">
+                                <label for="grad" class="col-md-3 control-label">Graduated_in</label>
+                                <div class="col-md-9">
+                                    <input type="number" class="form-control" name="grad" placeholder="Year">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <!-- Button -->                                       
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Add</button>
+                                </div>
+                            </div>  
+                        </form>
+                     </div>
+                </div>
+            </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,76 @@
+<% include partials/header %>
+<style type="text/css">
+    .tab{
+    width:100% !important;
+    text-align:center;
+}
+
+
+mark { 
+    background-color: #E05880;
+    color: #F5F5F5;
+}
+
+</style>
+
+<div class="container">
+<table class="table table-bordered table-hover table-striped "  align="center" width="40" >
+    
+  <tr class="pink " id="hd">
+    <th>S.No</th>
+    <th >Degree</th>
+    <th>Specialization </th>
+    <th>Name of the University</th>
+    <th>Graduated in </th>
+  </tr>
+  <!--if no educational details available -->
+  <% if(data2.length ==0) {%>
+    <tr class="white">
+    <td>none</td>
+    <td>none</td>
+    <td>none</td>
+    <td>none</td>
+  </tr>
+  <%}%>
+<% for(var i=0;i<data2.length;i++){ %>
+  <tr class="white">
+      <td><%= data2[i].id %></td>
+    <td><%=data2[i].degree %></td>
+    <td><%=data2[i].spec %></td>
+    <td><%=data2[i].univ %></td>
+    <td><%=data2[i].graduated_in %></td>
+  </tr>
+  
+<% } %>
+  
+</table>
+</div>
+
+<form> 
+
+
+<div class="container">
+    <table class="table table-bordered table-hover table-striped white "  align="center" width="40">
+        <tr>
+            <th> <a href="/signup2">Add a new Detail</a></th>
+            <th> Edit The Above : <% for(var i=0;i<data2.length;i++){ %> 
+      <mark> <a href="/editedu1/<%= data2[i].id %>"> <%= data2[i].id %> </a></mark>&nbsp
+          <% } %>
+     
+       
+            </th>
+        </tr>
+    </table>
+     <!--<form action="/editedu1" method="POST"> -->
+     <!--<select><% for(var i=0;i<data2.length;i++){ %> -->
+     <!--   <option value="<%= data2[i].id %>"><%= data2[i].id %></option>-->
+     <!--     <% } %>-->
+     <!--</select>-->
+     <!--  <input type="submit" value="edit">-->
+     <!--  </form>-->
+    </div>
+    
+
+
+
+<% include partials/footer %>

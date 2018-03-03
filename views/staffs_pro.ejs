@@ -1,0 +1,214 @@
+<!--Welcome <%= data[0].name %> !!!-->
+
+<!--<img src ="/images/upload_images/<%= data[0].image%>">-->
+
+<% include partials/header %>
+<style type="text/css">
+    .tab{
+    width:100% !important;
+    text-align:center;
+}
+
+#tabl{
+  width:55% !important;
+}
+.try{
+  width:75%;
+}
+
+
+.tab th{
+    text-align:center;
+    font-size : 20px;
+}
+.tab td{
+    font-size : 20px;
+}
+.panel{
+  width:100%;
+}
+</style>
+<center>
+<div class="container try">
+      <div class="row">
+      <div class="col-md-12   ">
+          <br>
+      </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " >
+   
+   
+          <div class="panel panel-info white">
+            <div class="panel-heading pink">
+              <h3 class="panel-title "><font color="white" size="5px">Personal Details</font></h3>
+            </div>
+            <div class="panel-body ">
+              
+                <div class="col-md-3 col-lg-3 " align="center"> 
+                <img  src="/images/upload_images/<%= data[0].image%>" class="img-circle img-responsive"> 
+                </div>
+                
+                
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information tab table-hover ">
+                    <tbody>
+                    <tr>
+                        <td>Name:</td>
+                        <td><%= data[0].name %></td>
+                      </tr>
+                      <tr>
+                        <td>Designation:</td>
+                        <td><%= data[0].designation %></td>
+                      </tr>
+                      <tr>
+                        <td>Experience:</td>
+                        <td><%= data[0].experience %></td>
+                      </tr>
+                      
+                   
+                         <tr>
+                           
+                        <tr>
+                        <td>Area Of Expertise</td>
+                        <td><%= data[0].area_of_exper %></td>
+                      </tr>
+                      <tr>
+                        <td>Email</td>
+                        <td><%= data[0].email %></td>
+                      </tr>
+                        <td>Phone Number</td>
+                        <td><%= data[0].mobile_no %>
+                        </td>
+                           
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+                  
+                  
+                  
+                
+              </div>
+            </div>
+                 <div class="panel-footer">
+                        <span class="pull-right">
+                           
+                        </span>
+                    </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+</center>
+
+<section class="text-center" >          
+            <div>
+             <h3>Educational Details</h3>
+            </div>
+           <center>
+             <hr id="line" width="25%", align="left"  style="padding-bottom: 2%">
+           </center> 
+           
+</section>
+
+
+<table class="table table-bordered table-hover table-striped tab" id="tabl" align="center" width="40" >
+    
+  <tr class="pink " id="hd">
+    <th >Degree</th>
+    <th>Specialization </th>
+    <th>Name of the University</th>
+    <th>Graduated in </th>
+  </tr>
+  <!--if no educational details available -->
+  <% if(data2.length ==0) {%>
+    <tr class="white">
+    <td>none</td>
+    <td>none</td>
+    <td>none</td>
+    <td>none</td>
+  </tr>
+  <%}%>
+<% for(var i=0;i<data2.length;i++){ %>
+  <tr class="white">
+    <td><%=data2[i].degree %></td>
+    <td><%=data2[i].spec %></td>
+    <td><%=data2[i].univ %></td>
+    <td><%=data2[i].graduated_in %></td>
+  </tr>
+  
+<% } %>
+  
+</table>
+<% if(data3.length!=0){%>
+<section class="text-center" >          
+            <div>
+             <h3>Project Details</h3>
+            </div>
+           <center>
+             <hr id="line" width="25%", align="left"  style="padding-bottom: 2%">
+           </center> 
+           
+</section>
+
+
+<table class="table table-bordered table-hover table-striped tab" id="tabl" align="center" width="40" >
+    
+  <tr class="pink">
+    <th >Title</th>
+    <th>Amount Received(In Rupees) </th>
+   
+    
+  </tr>
+  <!--if no educational details available -->
+  <% if(data3.length ==0) {%>
+    <tr class="white">
+    <td>none</td>
+    <td>none</td>
+   
+    
+  </tr>
+  <%}%>
+<% for(var i=0;i<data3.length;i++){ %>
+  <tr class="white">
+    <td><%=data3[i].p_title%></td>
+    <td><%=data3[i].amount %></td>
+    
+    
+  </tr>
+  
+<% } %>
+  
+</table>
+<%}%>
+
+
+<section class="text-center" style="margin-top: 2%">          
+            <div>
+             <h3>Publications</h3>
+            </div>
+           <center>
+             <hr id="line" width="25%", align="left"  style="padding-bottom: 2%">
+           </center> 
+           
+</section>
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " >
+   
+   
+          <div class="panel panel-info white">
+            <div class="panel-heading pink">
+              <!--<h3 class="panel-title "><font color="white" size="5px"><center>Publications</center></font></h3>-->
+            </div>
+
+             <textarea rows="10" cols="100" style="width:100%" readonly> <%= data[0].publications %></textarea>
+            
+</div>
+
+
+<div class="container">
+    
+</div>
+  
+
+<% include partials/footer %>
