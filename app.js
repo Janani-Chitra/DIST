@@ -25,9 +25,9 @@ var options = {
      app.use('/ICIITPhotoGallery', Gallery('ICIITGallery', options));
 	
 var connection = mysql.createConnection({
-	host     : '165.227.77.8',
+	host     : 'localhost',
 	user     : 'root',
-	password : '',
+	password : 'root',
 	database : 'my_schema'
 });
 
