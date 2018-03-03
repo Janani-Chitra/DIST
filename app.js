@@ -26,7 +26,7 @@ var options = {
 	
 var connection = mysql.createConnection({
 	host     : 'localhost',
-	user     : 'selvadurairaj',
+	user     : 'root',
 	password : '',
 	database : 'my_schema'
 });
