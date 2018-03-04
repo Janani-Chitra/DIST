@@ -2,7 +2,13 @@
 * GET home page.
 */
 var bcrypt = require('bcrypt-nodejs');
-
+var mysql=require("mysql");
+var db = mysql.createConnection({
+	host     : 'localhost',
+	user     : 'root',
+	password : 'root',
+	database : 'my_schema'
+});
  
 exports.index = function(req, res){
    var message = '';
@@ -37,7 +43,7 @@ exports.index = function(req, res){
       					var sql = "INSERT INTO `people`(`sid`,`name`,`designation`,`experience`,`mobile_no`,`email`,`area_of_exper`, `username`,`password`,`image`,`publications`) VALUES ('" + sid + "','" + name + "','" + desg + "','" + exp + "','" + mob + "','" + email + "','" + aoe + "','" + username + "','" + e_pass + "','" + img_name + "',?)";
 
     						var query = db.query(sql,pub, function(err, result) {
-    						    
+    						    if (err) throw err;
     						//	 res.redirect('profile/'+result.insertId);
     						res.send('<h1>you are successfully signed up!!!!!!!</h1>');
     						});
