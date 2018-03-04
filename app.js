@@ -291,8 +291,8 @@ app.post("/forgot",function(req, res) {
     var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'sravi@auist.net',
-    pass: 'mselvaraj'
+    user: 'distannauniv@gmail.com',
+    pass: 'Audist@)!*'
   }
 });
     var c=0;
