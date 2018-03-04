@@ -2,9 +2,10 @@
 * GET home page.
 */
 var bcrypt = require('bcrypt-nodejs');
+
  
 exports.index = function(req, res){
-    message = '';
+   var message = '';
    if(req.method == "POST"){
        
       var post  = req.body;
