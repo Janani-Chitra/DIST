@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="/i.jpg" />
+	<title>IST</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ 
+ <!--==========rupee symbol=====-->
+    <link rel="stylesheet" type="text/css" href="/demo2.css">
+<link rel="stylesheet" type="text/css" href="http://cdn.webrupee.com/font">
+<script src=http://cdn.webrupee.com/js type=”text/javascript”></script>
+
+<!--=======-->
+
+    
+  <script src="http://code.jquery.com/jquery-2.2.4.js" 
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--=================PEOPLE============-->
+  <script>
+      var floatPanel = new McFloatPanel();
+/* Float Panel v2016.10.28. Copyright www.menucool.com */
+function McFloatPanel(){var i=[],s=[],h="className",t="getElementsByClassName",d="length",l="display",C="transition",m="style",B="height",c="scrollTop",k="offsetHeight",a="fixed",e=document,b=document.documentElement,j=function(a,c,b){if(a.addEventListener)a.addEventListener(c,b,false);else a.attachEvent&&a.attachEvent("on"+c,b)},o=function(c,d){if(typeof getComputedStyle!="undefined")var b=getComputedStyle(c,null);else b=c.currentStyle;return b?b[d]:a},L=function(){var a=e.body;return Math.max(a.scrollHeight,a[k],b.clientHeight,b.scrollHeight,b[k])},O=function(a,c){var b=a[d];while(b--)if(a[b]===c)return true;return false},g=function(b,a){return O(b[h].split(" "),a)},q=function(a,b){if(!g(a,b))if(!a[h])a[h]=b;else a[h]+=" "+b},p=function(a,f){if(a[h]&&g(a,f)){for(var e="",c=a[h].split(" "),b=0,i=c[d];b<i;b++)if(c[b]!==f)e+=c[b]+" ";a[h]=e.replace(/^\s+|\s+$/g,"")}},n=function(){return window.pageYOffset||b[c]},z=function(a){return a.getBoundingClientRect().top},F=function(b){var c=n();if(c>b.oS&&!g(b,a))q(b,a);else g(b,a)&&c<b.oS&&p(b,a)},x=function(){for(var a=0;a<s[d];a++)J(s[a])},J=function(a){if(a.oS){a.fT&&clearTimeout(a.fT);a.fT=setTimeout(function(){if(a.aF)F(a);else y(a)},50)}else y(a)},w=function(d,c,b){p(d,a);c[l]="none";b.position=b.top=""},y=function(c){var j=z(c),f=c[k],e=c[m],d=c.pH[m],h=n();if(j<c.oT&&h>c.oS&&!g(c,a)&&(window.innerHeight||b.clientHeight)>f){c.tP=h+j-c.oT;var p=L();if(f>p-c.tP-f)var i=f;else i=0;d[l]="block";d[C]="none";d[B]=f+1+"px";c.pH[k];d[C]="height .3s";d[B]=i+"px";q(c,a);e.position=a;e.top=c.oT+"px";if(o(c,"position")!=a)d[l]="none"}else if(g(c,a)&&(h<c.tP||h<c.oS)){var s=o(c,"animation");if(c.oS&&c.classList&&s.indexOf("slide-down")!=-1){var r=o(c,"animationDuration");c.classList.remove(a);e.animationDirection="reverse";e.animationDuration="300ms";void c[k];c.classList.add(a);setTimeout(function(){w(c,d,e);e.animationDirection="normal";e.animationDuration=r},300)}else w(c,d,e)}},I=function(){var f=[],c,b;if(e[t]){f=e[t]("float-panel");i=e[t]("slideanim")}else{var k=e.getElementsByTagName("*");c=k[d];while(c--)g(k[c],"float-panel")&&f.push(k[c])}c=f[d];for(var h=0;h<c;h++){b=s[h]=f[h];b.oT=parseInt(b.getAttribute("data-top")||0);b.oS=parseInt(b.getAttribute("data-scroll")||0);if(b.oS>20&&o(b,"position")==a)b.aF=1;b.pH=e.createElement("div");b.pH[m].width=b.offsetWidth+"px";b.pH[m][l]="none";b.parentNode.insertBefore(b.pH,b.nextSibling)}if(s[d]){setTimeout(x,160);j(window,"scroll",x)}},f,D=200,E=0,r,u,H=function(){return window.innerWidth||b.clientWidth||e.body.clientWidth};function K(){if(!r)r=setInterval(function(){var a=e.body;if(a[c]<3)a[c]=0;else a[c]=a[c]/1.3;if(b[c]<3)b[c]=0;else b[c]=b[c]/1.3;if(!n()){clearInterval(r);r=null}},14)}function A(){clearTimeout(u);if(n()>D&&H()>E){u=setTimeout(function(){p(f,"mcOut")},60);f[m][l]="block"}else{q(f,"mcOut");u=setTimeout(function(){f[m][l]="none"},500)}}var N=function(){f=e.getElementById("backtop");if(f){var a=f.getAttribute("data-v-w");if(a){a=a.replace(/\s/g,"").split(",");D=parseInt(a[0]);if(a[d]>1)E=parseInt(a[1])}j(f,"click",K);j(window,"scroll",A);A()}},v=function(){for(var c=n(),e=c+window.innerHeight,g=i[d],b,f,a=0;a<g;a++){b=c+z(i[a]),f=b+i[a][k];if(b<e)q(i[a],"slide");else p(i[a],"slide")}},G=function(){if(i[d]){j(window,"scroll",v);v()}},M=function(){I();N();G()};j(window,"load",M);j(document,"touchstart",function(){})}
+  </script>
+<!--=====================SIDE PANEL IN HOME============-->
+  <script>
+    
+var accordionList = [
+                      {"contentClass":"login_content","headerClass":"login_heading"},
+                      {"contentClass":"academics_content","headerClass":"academics"},
+                      {"contentClass":"app_content","headerClass":"app"},
+                      {"contentClass":"gallery_content","headerClass":"gallery"},
+                      {"contentClass":"des_content","headerClass":"des"},
+                      {"contentClass":"feed_content","headerClass":"feed"}
+                    ];
+
+
+$(document).ready(function(){
+for(var j=0;j<accordionList.length;j++)
+{
+  $("."+accordionList[j].headerClass).find(".right").show();
+  $("."+accordionList[j].headerClass).find(".down").hide();
+}
+  $(".login_content").slideDown("slow");
+  $(".login_heading").find(".down").show();
+  $(".login_heading").find(".right").hide();
+  $(".login_content").addClass('out');
+});
+  /*  setInterval(function() {
+    $('button').animate( {background-color: "red !important" }, 300)
+    .animate( { background-color: "green !important" }, 300);
+  }, 1000);
+
+}); */
+
+/*var accordionList = [
+                      {"contentClass":"login_content","headerClass":"login_heading"},
+                      {"contentClass":"academics_content","headerClass":"academics"}
+                    ];
+*/
+function togglePanel(contentClass,headerClass){
+
+    $("."+contentClass).slideToggle("slow");
+
+  if(!$("."+contentClass).hasClass('out')){
+    $("."+contentClass).removeClass('in');
+    $("."+contentClass).addClass('out');
+  }
+  else{
+    $("."+contentClass).removeClass('out');
+    $("."+contentClass).addClass('in');
+  }
+
+  if($("."+contentClass).hasClass('out')){
+    $("."+headerClass).find(".right").hide();
+    $("."+headerClass).find(".down").show();
+  }else{
+    $("."+headerClass).find(".right").show();
+    $("."+headerClass).find(".down").hide();
+  }
+  for(var i=0;i<accordionList.length;i++)
+  {
+    if(!(accordionList[i].contentClass == contentClass)){
+      if(!$("."+accordionList[i].contentClass).hasClass('in')){
+        $("."+accordionList[i].contentClass).slideUp("slow");
+        $("."+accordionList[i].contentClass).removeClass('out');
+        $("."+accordionList[i].contentClass).addClass('in');
+
+        $("."+accordionList[i].headerClass).find(".right").show();
+        $("."+accordionList[i].headerClass).find(".down").hide();
+      }
+    }
+  }
+  //if($("."+className).attr('display') == "block")
+};
+/*
+function checkOnLoad(){
+  for(var i=0;i<accordionList.length;i++)
+  {
+    if(!(accordionList[i].contentClass == "login_content")){
+      if(!$("."+accordionList[i].contentClass).hasClass('in')){
+        $("."+accordionList[i].contentClass).slideToggle("slow");
+        $("."+accordionList[i].contentClass).removeClass('out');
+        $("."+accordionList[i].contentClass).addClass('in');
+        $("."+accordionList[i].headerClass).find(".right").show();
+        $("."+accordionList[i].headerClass).find(".down").hide();
+      }
+    }else{
+      $("."+accordionList[i].contentClass).addClass('out');
+
+        $("."+accordionList[i].headerClass).find(".down").show();
+        $("."+accordionList[i].headerClass).find(".right").hide();
+    }
+  }
+};
+
+checkOnLoad(); */
+
+  </script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	
+
+ <style type="text/css">
+ 	 .navbar-collapse{
+ 		max-height: 500px !important;
+ 	}
+ 	.navbar navbar-default{
+		max-height: 600px !important;
+	}
+
+	.headline{
+		/*height: 120px;*/
+		height: 50%;
+		margin-top: 0px !important;
+        padding-bottom: 10px;
+		background: #B24592;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-size: 100%;
+  font-family: 'Vidaloka', serif;
+  }
+
+.image{
+
+  width: 92px ;
+  height: 95px ;
+/*left : 225px ;*/
+margin-top: 5px;
+background-repeat: no-repeat;
+background-size: contain;
+}
+
+.fa-home
+{
+  color: black;
+}
+
+/*==============CONTACT PAGE===================*/
+.custom-icon {
+  background: #E2597F !important;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
+  border: 6px solid #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+  color: #fff;
+  display: table-cell;
+  font-size: 45px;
+  height: 60px;
+  padding: 30px;
+  text-align: center;
+  transition: .5s;
+  vertical-align: middle;
+  width: 60px;
+}
+.custom-icon:hover {
+  background: #B34591 !important;
+}
+.fix-editor {
+  display: none;
+}
+.icon-wrapper {
+  display: inline-block;
+}
+
+
+#i1,#i2
+{
+	margin-top: 60px;
+	margin-bottom: 15px;
+
+}
+
+.map
+{
+   width: 800px;
+   height: 300px;
+   margin-top: 25px;
+   border: 2px solid black !important;
+
+
+}
+
+/*================HOME PAGE=============*/
+#rcorners2 {
+    border-radius: 10px;
+    border: 2px /*solid black*/;
+    background: #B24592;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: white;
+    padding: 20px; 
+    width: 100%;
+    height: 30px;  
+}
+#grad1 {
+    color:white;
+    
+}
+#center-img{
+  height:460px;
+  width:100%;
+}
+.imgdiv{
+
+background-color: #f9f9f9;
+
+
+}
+
+
+/*last divtag*/
+
+.login_heading{
+  width : 100% ;
+  position: relative;
+  height : 6% ;
+  color : white ;
+  background: #B24592;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  cursor: pointer;
+}
+
+.login_text,.academic_text,.app_text,.gallery_text,.des_text ,.feed_text{
+  position : relative ;
+  top : 5px ;
+  font-family: arial , verdana , sans-serif;
+  font-weight: bold ;
+  padding-left: 30px ;
+  font-size : 15px ;
+
+}
+.login_content,.academics_content,.app_content ,.gallery_content,.des_content,.feed_content{
+  position: initial;
+  height: auto ;
+  top : 0% ;
+  color : #01508C ;
+  
+  background-color: #B8CFE0 ;
+  box-shadow:3px 5px 20px #888888;
+  
+  display: none ;
+}
+.username{
+  padding-left: 15px ;
+}
+
+.username_box{
+  position: relative;
+  width: 77% ;
+}
+
+.forgot{
+  padding-left: 15px ;
+  position: relative;
+}
+
+.academics{
+width : 100% ;
+position: relative;
+height : 6% ;
+color : #DF5881 ;
+background-color: #f9f9f9;
+cursor: pointer;
+top : 5px ;
+}
+
+.app{
+width : 100% ;
+position: relative;
+height : 6% ;
+color : white ;
+background: #B24592;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+cursor: pointer;
+top : 5px;
+}
+
+.gallery{
+width : 100% ;
+position: relative;
+height : 6% ;
+color : #DF5881 ;
+background-color: #f9f9f9;
+cursor: pointer;
+top : 5px;
+}
+
+.gallery_content{
+  height: 110px;
+}
+
+.image_1{
+  position: relative;
+  width: 70px ;
+  height: 70px ;
+  top : 20px ;
+}
+
+.des{
+width : 100% ;
+position: relative;
+height : 6% ;
+color : white ;
+background: #B24592;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+cursor: pointer;
+top : 5px;
+}
+
+.feed{
+width : 100% ;
+position: relative;
+height : 6% ;
+color : #DF5881  ;
+background-color: #f9f9f9;
+cursor: pointer;
+top : 5px;
+}
+
+.pink
+{
+	background: #B24592;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+color: #f9f9f9;
+border: 1px solid #f9f9f9;
+
+}
+
+.white
+{
+	border: 1px solid #DF5881;
+	background-color: #f9f9f9;
+	color: #DF5881;
+}
+
+/*==============HODdesk==================*/
+.panel
+{
+	width: 500px;
+    
+
+}
+
+.panel-footer
+{
+	text-align: right;
+}
+
+
+
+
+/*=================FOOTER=================*/
+
+.row{
+	margin-top: 2%;
+}
+
+.ma
+{
+	background: #B24592;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+margin-top: 10px;
+}
+
+</style>
+
+</head>
+<body>
+<div class="top">
+	
+<div class="headline">
+	
+	<table align="center" width="100%" style="margin-left: 10%">
+		<tr>
+			<th><img src="/i.ico" class="image"></th>
+			<th><h2 style=" color: white; margin-left:5%;">DEPARTMENT OF INFORMATION SCIENCE & TECHNOLOGY</h2>
+				<div class="header"><p style="font-size:25px; color: white; text-indent: 20%; ">Anna University,Chennai-600025</p></div>
+      </th>
+		</tr>
+	</table>
+ 
+  </div>
+
+<nav class="navbar navbar-default " role="navigation">
+    
+    	    
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+            
+            <ul class=" menu nav navbar-nav">
+               <li style="border-left: 2px solid black; "><a href="/"><i class="fa fa-home"></i> <font color="black"> Dist</font></a></li>
+               <!-- <li><a href="#s1">About </a> </li> -->
+               <li><a href="/HODdesk"><i class="fa fa-user-circle-o" aria-hidden="true"></i> HOD'S DESk</a></li>
+               <li><a href="/courses/0"><i class="fa fa-university"></i> Courses </a>
+                   <ul class="submenu">
+                      <li><a href="/courses/1">BTech IT </a></li>
+                      <li><a href="/courses/2">MTech IT</a></li>
+                      <li><a href="/courses/3">ME (MM)</a></li>
+                      <li><a href="/courses/4">MCA</a></li>            
+                   </ul>
+               </li>
+               <li><a href="/people"><i class="fa fa-male"></i> People </a>
+                   <ul class="submenu">
+                      <li><a href="/teaching">TEACHING </a>
+                <!-- <ul class="subsubmenu">
+                  <li><a href="#">PROFESSORS AND HEAD </a></li>
+                  <li><a href="#">PROFESSORS</a></li>
+                  <li><a href="#">ASSISTANCE PROFESSORS</a></li>                
+                  <li><a href="#">TEACHING FELLOWSHIP</a></li>
+                </ul> -->
+                      </li>
+                      <li><a href="/nonteaching">NONTEACHING</a></li>
+                      <li><a href="/students">STUDENTS</a></li>
+                   </ul>
+                </li>
+            
+  
+  	            <li><a href="/ISTA/index.html"  target="_blank"><i class="fa fa-graduation-cap"></i> ISTA</a></li>
+  	            
+                <li><a href="/contact"><i class="fa fa-address-book"></i> CONTACT</a></li>
+                <li style="border-right: 2px solid black"><a href="http://sabarirb.org/moodle/" target="_blank" ><i class="fa fa-meetup" aria-hidden="true"></i> MOODLE</a></li>
+
+            </ul>
+
+           
+        
+    
+   </div>
+</nav>
+</div>
