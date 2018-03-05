@@ -437,6 +437,14 @@ app.post("/signup3",function(req, res) {
 app.get("/courses",function(req,res){
     res.render("courses");
 });
+app.get("/project",function(req, res) {
+    var q="Select people.name, p_project.p_title,p_project.amount from people right join p_project on p_project.s_id= people.sid";
+    connection.query(q,function(err, results) {
+        if(err) throw err;
+        res.render("project",{data:results});
+    })
+    
+})
 
 
 
