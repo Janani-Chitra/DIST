@@ -275,8 +275,7 @@ app.post("/changePass",function(req,res){
     
     
 })
-//app.get('/signup', routes.index);//call for main index page
-//app.post('/signup', routes.index);//call for signup post 
+
 //app.get('/profile/:id',routes.profile);//to render users profile
 //Middleware
     
