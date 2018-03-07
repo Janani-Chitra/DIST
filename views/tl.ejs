@@ -1,0 +1,30 @@
+<% include partials/header %>
+
+<section class="text-center" >          
+            <div>
+             <h3>Teaching and Learning</h3>
+            </div>
+           <center>
+             <hr id="line" width="25%", align="left"  style="padding-bottom: 2%">
+           </center> 
+           
+</section>
+
+<table class="table table-bordered table-hover table-striped tab" id="tabl" align="center" width="40" >
+    <tr class="pink">
+        <th>Sno</th>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Topic</th>
+    </tr>
+    <% for(var i=0;i<data2.length;i++){ %>
+  <tr >
+    <td><%= i+1 %></td>
+    <td><%=data[i].TLdate %></td>
+    <td><%=data[i].name %></td>
+    <td><%=data[i].topic %></td>
+  </tr>
+  
+<% } %>
+    </table>
+<% include partials/footer %>

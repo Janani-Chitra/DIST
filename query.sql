@@ -72,3 +72,13 @@ ALTER TABLE people MODIFY COLUMN mobile_no VARCHAR(100);
 alter table p_project  add column amount varchar(40);
 
 update p_project set amount="25,000" where pid="7";
+
+
+create table tl (
+ id int auto_increment primary key,
+ TLdate varchar(20),
+ name varchar(20),
+ topic varchar(20)
+)
+
+insert into tl (TLdate,name,topic) values("2017-02-06","Mr.Sivakumar, Bangalore","Analytics & Banking");

@@ -446,7 +446,13 @@ app.get("/project",function(req, res) {
 })
 
 
-
+app.get("/tl",function(req, res) {
+    var q="select * from tl";
+    connection.query(q,function(err, results) {
+        if(err) throw err
+        res.render("tl",{data:results});
+    });
+})
 
 
 app.listen(80,function()
