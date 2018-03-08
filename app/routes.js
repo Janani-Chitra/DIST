@@ -1,6 +1,12 @@
 // app/routes.js
 module.exports = function(app, passport) {
-
+	var mysql=require("mysql");
+var connection = mysql.createConnection({
+	host     : 'localhost',
+	user     : 'root',
+	password : 'root',
+	database : 'my_schema'
+});
 	// =====================================
 	// HOME PAGE (with login links) ========
 	// =====================================
@@ -57,7 +63,64 @@ module.exports = function(app, passport) {
 			user : req.user // get the user out of session and pass to template
 		});
 	});
-	
+	app.get("/edit/:id",isLoggedIn,function(req, res) {
+    var id=req.params.id;
+    var q= "select * from people where id='"+id+"'";
+    connection.query(q,function(err, results) {
+     if(err) throw err;
+      var result=results;
+    var s_id=result[0].sid;
+    var q1= "select * from p_edu where s_id='"+s_id+"'";
+    var q2= "select * from p_project where s_id='"+s_id+"'";
+    connection.query(q1,function(err, results) {
+      if (err) throw err;
+       var results=results;
+      connection.query(q2,function(err, resu) {
+      if (err) throw err;
+     
+      res.render("edit",{data:result,data2:results,data3:resu});  
+    });
+     
+    });
+
+    })
+});
+
+app.get("/editedu/:id",isLoggedIn,function(req, res) {
+    var id=req.params.id;
+    var q= "select * from people where id='"+id+"'";
+    connection.query(q,function(err, results) {
+     if(err) throw err;
+      var result=results;
+    var s_id=result[0].sid;
+    var q1= "select * from p_edu where s_id='"+s_id+"'";
+    
+    connection.query(q1,function(err, results) {
+      if (err) throw err;
+       var results=results;
+    
+     
+      res.render("editedu",{data2:results});  
+    
+    });
+
+    })
+});
+
+app.get("/changePass/:id",isLoggedIn, function(req, res) {
+    req.flash("msg",""); 
+    res.render("changePass",{id:req.params.id,data:req.flash("msg")});
+})
+app.get("/editedu1/:id",isLoggedIn, function(req, res) {
+    var id=req.params.id;
+    var q= "select * from p_edu where id='"+id+"' ";
+    connection.query(q,function(err, results) {
+        if(err) throw err;
+        res.render("ededu",{data:results});
+    })
+    
+})   
+
 	app.get("/imageins",isLoggedIn,function(req,res){
     res.render("imageins");
 });

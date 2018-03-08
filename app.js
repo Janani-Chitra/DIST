@@ -145,28 +145,6 @@ app.get("/staffs_pro/:id",function(req, res) {
 });
 
 
-app.get("/edit/:id",function(req, res) {
-    var id=req.params.id;
-    var q= "select * from people where id='"+id+"'";
-    connection.query(q,function(err, results) {
-     if(err) throw err;
-      var result=results;
-    var s_id=result[0].sid;
-    var q1= "select * from p_edu where s_id='"+s_id+"'";
-    var q2= "select * from p_project where s_id='"+s_id+"'";
-    connection.query(q1,function(err, results) {
-      if (err) throw err;
-       var results=results;
-      connection.query(q2,function(err, resu) {
-      if (err) throw err;
-     
-      res.render("edit",{data:result,data2:results,data3:resu});  
-    });
-     
-    });
-
-    })
-});
 
 app.post("/edit/:id", function(req, res) {
     //console.log(req.params.id);
@@ -187,37 +165,8 @@ app.post("/edit/:id", function(req, res) {
 })
 
 
-app.get("/editedu/:id",function(req, res) {
-    var id=req.params.id;
-    var q= "select * from people where id='"+id+"'";
-    connection.query(q,function(err, results) {
-     if(err) throw err;
-      var result=results;
-    var s_id=result[0].sid;
-    var q1= "select * from p_edu where s_id='"+s_id+"'";
-    
-    connection.query(q1,function(err, results) {
-      if (err) throw err;
-       var results=results;
-    
-     
-      res.render("editedu",{data2:results});  
-    
-    });
-
-    })
-});
 
 
-app.get("/editedu1/:id",function(req, res) {
-    var id=req.params.id;
-    var q= "select * from p_edu where id='"+id+"' ";
-    connection.query(q,function(err, results) {
-        if(err) throw err;
-        res.render("ededu",{data:results});
-    })
-    
-})   
 
 app.post("/ededu/:id",function(req, res) {
     var deg= req.body.deg;
@@ -233,10 +182,7 @@ app.post("/ededu/:id",function(req, res) {
 })
             
 
-app.get("/changePass/:id",function(req, res) {
-    req.flash("msg",""); 
-    res.render("changePass",{id:req.params.id,data:req.flash("msg")});
-})
+
 app.post("/changePass",function(req,res){
     
     var opass=req.body.opassword;
