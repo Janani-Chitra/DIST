@@ -383,55 +383,55 @@ app.get("/intercom",function(req, res) {
 
 })
 var signup_msg="";
-// app.get("/signup2",function(req,res){
-//     res.render("signup2",{data:signup_msg});
-// });
-// app.post("/signup2",function(req, res) {
-//   var sid=req.body.sid;
-//   var deg=req.body.deg;
-//   var univ=req.body.univ;
-//   var grad=req.body.grad;
-//   var spec=req.body.spec;
-//   var q="INSERT INTO `p_edu`(`s_id`,`degree`,`spec`,`univ`,`graduated_in`) VALUES ('" + sid + "','" + deg + "','" + spec + "','" + univ + "','" + grad + "')";
-//       connection.query(q,function(err, results) {
-//           if (err)  {
-//               signup_msg="try again";
-//               res.render("signup2",{data:signup_msg});
-//           }
-//           else{
-//               signup_msg="sucesss";
-//               res.render("signup2",{data:signup_msg});
-//           }
+app.get("/signup2",function(req,res){
+    res.render("signup2",{data:signup_msg});
+});
+app.post("/signup2",function(req, res) {
+  var sid=req.body.sid;
+  var deg=req.body.deg;
+  var univ=req.body.univ;
+  var grad=req.body.grad;
+  var spec=req.body.spec;
+  var q="INSERT INTO `p_edu`(`s_id`,`degree`,`spec`,`univ`,`graduated_in`) VALUES ('" + sid + "','" + deg + "','" + spec + "','" + univ + "','" + grad + "')";
+      connection.query(q,function(err, results) {
+          if (err)  {
+              signup_msg="try again";
+              res.render("signup2",{data:signup_msg});
+          }
+          else{
+              signup_msg="sucesss";
+              res.render("signup2",{data:signup_msg});
+          }
           
-//           //console.log("successfully inserted");
+          //console.log("successfully inserted");
           
-//       })
-// })
+      })
+})
 
-// app.get("/signup3",function(req,res){
-//     res.render("signup3",{data:signup_msg});
-// });
-// app.post("/signup3",function(req, res) {
-//   var sid=req.body.sid;
-//   var p_tit=req.body.ptit;
-//   var advisees=req.body.adv;
-//   var lab=req.body.lab;
-//   var stat=req.body.stat;
-//   var q="INSERT INTO `p_project`(`s_id`,`p_title`,`advisees`,`lab`,`stat`) VALUES ('" + sid + "','" + p_tit + "','" + advisees + "','" + lab + "','" + stat + "')";
-//       connection.query(q,function(err, results) {
-//           if (err)  {
-//               signup_msg="try again";
-//               res.render("signup3",{data:signup_msg});
-//           }
-//           else{
-//               signup_msg="sucesss";
-//               res.render("signup3",{data:signup_msg});
-//           }
+app.get("/signup3",function(req,res){
+    res.render("signup3",{data:signup_msg});
+});
+app.post("/signup3",function(req, res) {
+  var sid=req.body.sid;
+  var p_tit=req.body.ptit;
+  var advisees=req.body.adv;
+  var lab=req.body.lab;
+  var stat=req.body.stat;
+  var q="INSERT INTO `p_project`(`s_id`,`p_title`,`advisees`,`lab`,`stat`) VALUES ('" + sid + "','" + p_tit + "','" + advisees + "','" + lab + "','" + stat + "')";
+      connection.query(q,function(err, results) {
+          if (err)  {
+              signup_msg="try again";
+              res.render("signup3",{data:signup_msg});
+          }
+          else{
+              signup_msg="sucesss";
+              res.render("signup3",{data:signup_msg});
+          }
           
-//           //console.log("successfully inserted");
+          //console.log("successfully inserted");
           
-//       })
-// })
+      })
+})
 
 
 app.get("/courses",function(req,res){

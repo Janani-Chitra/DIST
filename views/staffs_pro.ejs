@@ -120,8 +120,15 @@
     <th>Name of the University</th>
     <th>Graduated in </th>
   </tr>
- 
-  
+  <!--if no educational details available -->
+  <% if(data2.length ==0) {%>
+    <tr class="white">
+    <td>none</td>
+    <td>none</td>
+    <td>none</td>
+    <td>none</td>
+  </tr>
+  <%}%>
 <% for(var i=0;i<data2.length;i++){ %>
   <tr class="white">
     <td><%=data2[i].degree %></td>
@@ -166,7 +173,7 @@
 <% for(var i=0;i<data3.length;i++){ %>
   <tr class="white">
     <td><%=data3[i].p_title%></td>
-    <td><%=data3[i].amount %></td>
+    <td><span class="WebRupee">&#x20B9;</span> <%=data3[i].amount %></td>
     
     
   </tr>
@@ -174,8 +181,31 @@
 <% } %>
   
 </table>
-<%}%>
+<% } %>
+<% if(data.researchS!=null){%>
+<div class="container" style="padding-bottom: 2%">
+    
+</div>
+<center>
+<div style="width:50%" >
+   
+   
+          <div class="panel panel-info white">
+            <div class="panel-heading pink">
+              <h3 class="panel-title "><font color="white" size="3px"><center>Research Scholars</center></font></h3>
+            </div>
 
+             <textarea style="width:100%" readonly> <%= data[0].researchS %></textarea>
+            
+</div>
+</div>
+</center>
+
+<div class="container">
+    
+</div>
+  
+<% } %>
 
 <section class="text-center" style="margin-top: 2%">          
             <div>
