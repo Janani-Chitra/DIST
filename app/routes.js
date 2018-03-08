@@ -120,7 +120,10 @@ app.get("/editedu1/:id",isLoggedIn, function(req, res) {
     })
     
 })   
-
+var signup_msg="";
+app.get("/signup2",isLoggedIn, function(req,res){
+    res.render("signup2",{data:signup_msg});
+});
 	app.get("/imageins",isLoggedIn,function(req,res){
     res.render("imageins");
 });

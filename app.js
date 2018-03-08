@@ -329,9 +329,7 @@ app.get("/intercom",function(req, res) {
 
 })
 var signup_msg="";
-app.get("/signup2",function(req,res){
-    res.render("signup2",{data:signup_msg});
-});
+
 app.post("/signup2",function(req, res) {
   var sid=req.body.sid;
   var deg=req.body.deg;

@@ -139,7 +139,7 @@ checkOnLoad(); */
 		/*height: 120px;*/
 		height: 50%;
 		margin-top: 0px !important;
-        padding-bottom: 10px;
+     
 		background: #B24592;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -411,7 +411,7 @@ margin-top: 10px;
 
 </head>
 <body>
-<div class="top">
+
 	
 <div class="headline">
 	
@@ -429,7 +429,7 @@ margin-top: 10px;
 	</table>
  
   </div>
-</div>
+
 	<h4 align=left ><font color="#B54691" >  <strong>Welcome</strong>:</font> <font color="#F05F7A"><%= user.name %> </font></h4>
 	
 	
@@ -521,6 +521,7 @@ margin-top: 10px;
        <p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=/staffs_pro/<%= user.id%> style="font-weight:bold">View Profile</a> <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/edit/<%= user.id%>" style="font-weight:bold">Edit Profile</a> <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/editedu/<%= user.id%>" style="font-weight:bold">Edit Educational details</a> <br>
+        
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/changePass/<%= user.id%>" style="font-weight:bold">Change Password</a> </a><br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/logout" style="font-weight:bold">Logout</a></p>
 
