@@ -81,4 +81,4 @@ create table tl (
  topic varchar(20)
 )
 
-insert into tl (TLdate,name,topic) values("2017-02-06","Mr.Sivakumar, Bangalore","Analytics & Banking");
+insert into tl (TLdate,name,topic) values("2017-03-17","Mr.Felix Manosh(CEO), Flixy Games Pvt. Ltd.","Virtual Workshop");

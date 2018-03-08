@@ -1,5 +1,23 @@
 <% include partials/header %>
-
+<style type=text/css>
+.tab{
+    width:75% !important;
+}
+.hod{
+    
+}
+.tab td{
+    font-size : 17px;
+    font-family: 'Noto Serif', serif;
+}
+.tab th{
+    text-align:center;
+    font-size : 20px;
+}
+footer{
+    margin-top: 7% !important;
+}
+</style>
 <section class="text-center" >          
             <div>
              <h3>Teaching and Learning</h3>
@@ -17,7 +35,7 @@
         <th>Name</th>
         <th>Topic</th>
     </tr>
-    <% for(var i=0;i<data2.length;i++){ %>
+    <% for(var i=0;i<data.length;i++){ %>
   <tr >
     <td><%= i+1 %></td>
     <td><%=data[i].TLdate %></td>
