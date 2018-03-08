@@ -36,7 +36,7 @@
   
   
   <table class="table hod table-hover table-striped tab" align="center"  >
-      
+   <% if(mes == 1 || mes==0) {%>   
       <tr>
           <th class="pink" colspan="4">
          HEAD OF THE DEPARTMENT 
@@ -65,7 +65,9 @@
          <% } %>
   </table>
   </center>
-  
+ <% } %> 
+ 
+ <% if(mes == 2 || mes==0) {%> 
   <table class="table  table-hover table-striped tab" align="center"  >
       
       <tr>
@@ -107,6 +109,8 @@
            <tr class="white"><td> none</td></tr>
          <% } %>
   </table>
+ <% } %>
+ <% if(mes == 3 || mes==0) {%> 
    <table class="table  table-hover table-striped tab" align="center"  >
       
       <tr>
@@ -148,6 +152,9 @@
          <% } %>
       
   </table>
+  
+  <% } %>
+  <% if(mes == 4 || mes==0) {%> 
   <table class="table  table-hover table-striped tab" align="center"  >
       
       <tr>
@@ -190,6 +197,8 @@
            <tr class="white"><td> none</td></tr>
          <% } %>
   </table>
+  <% } %>
+  <% if(mes == 5 || mes==0) {%> 
 <table class="table  table-hover table-striped tab" align="center"  >
       
       <tr>
@@ -233,6 +242,8 @@
          <% } %>
       
   </table>
+  <% } %>
+  <% if(mes == 6 || mes==0) {%> 
 <table class="table  table-hover table-striped tab" align="center"  >
       
       <tr>
@@ -279,7 +290,7 @@
          <% } %>
       
   </table>
-
+<% } %>
 
 
 <% include partials/footer %>

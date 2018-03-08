@@ -105,11 +105,12 @@ app.get("/nonteaching",function(req,res){
     res.render("nonteaching");
 });
 
-app.get("/teaching",function(req,res){
+app.get("/teaching/:id",function(req,res){
+    var id=req.params.id;
     var query="select * from people";
     connection.query(query,function(err,results){
         //console.log(results);
-        res.render("teaching",{data: results});
+        res.render("teaching",{data: results,mes:id});
     });
     
 });
