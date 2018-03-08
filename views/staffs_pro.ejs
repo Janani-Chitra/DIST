@@ -100,7 +100,7 @@
       </div>
     </div>
 </center>
-
+<% if(data2.length!=0){%>
 <section class="text-center" >          
             <div>
              <h3>Educational Details</h3>
@@ -120,14 +120,7 @@
     <th>Name of the University</th>
     <th>Graduated in </th>
   </tr>
-  <!--if no educational details available -->
-  <% if(data2.length ==0) {%>
-    <tr class="white">
-    <td>none</td>
-    <td>none</td>
-    <td>none</td>
-    <td>none</td>
-  </tr>
+ 
   <%}%>
 <% for(var i=0;i<data2.length;i++){ %>
   <tr class="white">
@@ -140,6 +133,7 @@
 <% } %>
   
 </table>
+<% } %>
 <% if(data3.length!=0){%>
 <section class="text-center" >          
             <div>
