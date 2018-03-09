@@ -328,6 +328,11 @@ app.get("/intercom",function(req, res) {
     res.sendFile(__dirname + '/file-folder/intercom.docx');
 
 })
+
+app.get('/signup', routes.index);//call for main index page
+app.post('/signup', routes.index);//call for signup post 
+//app.get('/profile/:id',routes.profile);//to render users profile
+//Middleware
 var signup_msg="";
 
 app.post("/signup2",function(req, res) {
