@@ -63,8 +63,8 @@ var connection = mysql.createConnection({
 			user : req.user // get the user out of session and pass to template
 		});
 	});
-	app.get("/edit/:id",isLoggedIn,function(req, res) {
-    var id=req.params.id;
+	app.get("/edit",isLoggedIn,function(req, res) {
+    var id=req.user.id;
     var q= "select * from people where id='"+id+"'";
     connection.query(q,function(err, results) {
      if(err) throw err;
@@ -86,8 +86,8 @@ var connection = mysql.createConnection({
     })
 });
 
-app.get("/editedu/:id",isLoggedIn,function(req, res) {
-    var id=req.params.id;
+app.get("/editedu",isLoggedIn,function(req, res) {
+    var id=req.user.id;
     var q= "select * from people where id='"+id+"'";
     connection.query(q,function(err, results) {
      if(err) throw err;
@@ -107,12 +107,12 @@ app.get("/editedu/:id",isLoggedIn,function(req, res) {
     })
 });
 
-app.get("/changePass/:id",isLoggedIn, function(req, res) {
+app.get("/changePass",isLoggedIn, function(req, res) {
     req.flash("msg",""); 
-    res.render("changePass",{id:req.params.id,data:req.flash("msg")});
+    res.render("changePass",{id:req.user.id,data:req.flash("msg")});
 })
-app.get("/editedu1/:id",isLoggedIn, function(req, res) {
-    var id=req.params.id;
+app.get("/editedu1",isLoggedIn, function(req, res) {
+    var id=req.user.id;
     var q= "select * from p_edu where id='"+id+"' ";
     connection.query(q,function(err, results) {
         if(err) throw err;
