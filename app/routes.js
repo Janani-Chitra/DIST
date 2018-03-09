@@ -111,8 +111,8 @@ app.get("/changePass",isLoggedIn, function(req, res) {
     req.flash("msg",""); 
     res.render("changePass",{id:req.user.id,data:req.flash("msg")});
 })
-app.get("/editedu1",isLoggedIn, function(req, res) {
-    var id=req.user.id;
+app.get("/editedu1/:id",isLoggedIn, function(req, res) {
+    var id=req.params.id;
     var q= "select * from p_edu where id='"+id+"' ";
     connection.query(q,function(err, results) {
         if(err) throw err;
