@@ -329,8 +329,8 @@ app.get("/intercom",function(req, res) {
 
 })
 
-app.get('/signup', routes.index);//call for main index page
-app.post('/signup', routes.index);//call for signup post 
+//app.get('/signup', routes.index);//call for main index page
+//app.post('/signup', routes.index);//call for signup post 
 //app.get('/profile/:id',routes.profile);//to render users profile
 //Middleware
 var signup_msg="";
@@ -357,9 +357,7 @@ app.post("/signup2",function(req, res) {
       })
 })
 
-app.get("/signup3",function(req,res){
-    res.render("signup3",{data:signup_msg});
-});
+
 app.post("/signup3",function(req, res) {
   var sid=req.body.sid;
   var p_tit=req.body.ptit;

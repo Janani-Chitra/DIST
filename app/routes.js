@@ -127,6 +127,9 @@ app.get("/signup2",isLoggedIn, function(req,res){
 	app.get("/imageins",isLoggedIn,function(req,res){
     res.render("imageins");
 });
+app.get("/signup3",isLoggedIn,function(req,res){
+    res.render("signup3",{data:signup_msg});
+});
 
 
 	// =====================================
