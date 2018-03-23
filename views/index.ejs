@@ -12,29 +12,6 @@
     background-color:#036696;
   }
   
-  /*====================temp ===================*/
-  .modal.fade .modal-dialog {
-    -webkit-transform: scale(0.1);
-    -moz-transform: scale(0.1);
-    -ms-transform: scale(0.1);
-    transform: scale(0.1);
-    top: 300px;
-    opacity: 0;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.modal.fade.in .modal-dialog {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform: translate3d(0, -300px, 0);
-    transform: translate3d(0, -300px, 0);
-    opacity: 1;
-}
-  
 </style>
 
 <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
@@ -45,29 +22,9 @@
  <p id="rcorners2">
    
   <!--<marquee style="padding-bottom:10px;!important"  onmouseover="this.stop();"onmouseout="this.start();"><a href="/tip/index.html" target="_blank"   id="impor_link"><strong>TIP Exhibition At Ada Lovelace </strong></a></marquee>-->
-  <marquee onmouseover="this.stop();"onmouseout="this.start();">
-  <a id="impor_link" class="" data-toggle="modal" data-target="#popup_img">
- <strong> TIP 2K18 - Exhibition at Ada Lovelace</strong>
-</a>
-</marquee>
+  
  </p>
 </div>
-<!--================ pop up temp ====================-->
-
-<div class="modal fade" id="popup_img" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-   <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-    
-  <div class="modal-dialog" role="document">
-        <img style="height: 100%; width :100%" alt="" src="tip.jpg">
-    
-  </div>
-  <div class="col-md-3"></div>
-  </div>
- </div>
-</div>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
-<!--==================================================-->
 <div class="row">
   <div class="col-xs-12 col-md-4 imgdiv" >
   	  <div class="w3-third" style="width: 100%">
