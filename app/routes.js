@@ -113,13 +113,42 @@ app.get("/changePass",isLoggedIn, function(req, res) {
 })
 app.get("/editedu1/:id",isLoggedIn, function(req, res) {
     var id=req.params.id;
+    var id1=req.user.id;
+    var q1="select sid from people where id ='"+ id1+"' ";
     var q= "select * from p_edu where id='"+id+"' ";
-    connection.query(q,function(err, results) {
+    connection.query(q1,function(err, results) {
+       if(err) throw err;
+        connection.query(q,function(err, result) {
         if(err) throw err;
-        res.render("ededu",{data:results});
+        //console.log(result[0].s_id);
+       // console.log(results[0].sid);
+        if(result[0].s_id == results[0].sid)
+          {  res.render("ededu",{data:result});
+          }
+        else
+          {
+            
+             res.redirect("/editedu");
+          }
+    })
     })
     
+    
 })   
+
+app.get("/deleteedu/:id",isLoggedIn, function(req, res) {
+            var id = req.params.id;
+            console.log(id);
+            var q = "delete from p_edu where id='"+id+"' ";
+            connection.query(q,function(err, results) {
+                if(err)throw err;
+               console.log("deleted");
+               res.redirect("/editedu");
+            })
+          
+     })   
+
+ 
 var signup_msg="";
 app.get("/signup2",isLoggedIn, function(req,res){
     res.render("signup2",{data:signup_msg});
