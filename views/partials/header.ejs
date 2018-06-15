@@ -398,6 +398,50 @@ margin-top: 10px !important;
 padding:0 !important;
 }
 
+ .tooltiptext {
+    margin-top:2px;
+    visibility: hidden;
+    width: 300px;
+    height:300px;
+	border: 1px solid #295196;
+	background-color: #f9f9f9;
+    overflow:scroll;
+    overflow-x: auto;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tool:hover .tooltiptext {
+    visibility: visible;
+}
+.tooltiptext:hover .tooltiptext {
+    visibility: visible;
+}
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #B8B8B8; 
+    border-radius: 7px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:grey;
+
 </style>
 
 </head>
@@ -437,8 +481,19 @@ padding:0 !important;
         <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
             
             <ul class=" menu nav navbar-nav">
-               <li style="border-left: 2px solid black; "><a href="/"><i class="fa fa-home"></i>  Dist</a></li>
-               <!-- <li><a href="#s1">About </a> </li> -->
+                <li style="border-left: 2px solid black; "class="tool"><a href="/" ><i class="fa fa-home"></i>  Dist</a>  <span class="tooltiptext">	<h4><font color="#036696">Vision of the Department</font></h4><br>
+The Department of Information Science and Technology pledges to educate students with conceptual knowledge and technical skills to forge ahead in the field of IT, while inculcating deep moral and ethical values to achieve excellence, by providing a vibrant academic and research environment in collaboration with industry.
+<h4><font color="#036696">Mission of the Department </font></h4><br>
+1.To inculcate in students a firm foundation in theory and practice of IT skills coupled with the thought process for disruptive innovation and research methodologies, to keep pace with emerging technologies.
+2.To provide a conducive environment for all academic, administrative and interdisciplinary research activities using state-of-the-art technologies.
+3.To produce graduates and doctorates, who will enter the workforce as productive IT engineers, researchers and entrepreneurs with necessary soft skills, and continue higher professional education with competence in the global market.
+4.To enable seamless collaboration with the IT industry and Government for consultancy and sponsored research.
+5.To cater to cross-cultural, multinational and demographic diversity of students.
+6.To educate the students on the social, ethical, and moral values needed to make significant 
+contributions to society.
+
+</span></li>
+                <!-- <li><a href="#s1">About </a> </li> -->
                <li><a href="/HODdesk"><i class="fa fa-user-circle-o" aria-hidden="true"></i> HOD'S DESk</a></li>
                <li><a href="/courses/0"><i class="fa fa-graduation-cap"></i> Courses </a>
                    <ul class="submenu">
