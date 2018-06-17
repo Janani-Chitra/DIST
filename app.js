@@ -114,7 +114,9 @@ app.get("/teaching/:id",function(req,res){
     });
     
 });
-
+app.get("/VM",function(req, res) {
+    res.render("VM");
+})
 app.get("/staffs_pro/:id",function(req, res) {
     var id=req.params.id;
   
