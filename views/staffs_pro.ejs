@@ -3,6 +3,11 @@
 <!--<img src ="/images/upload_images/<%= data[0].image%>">-->
 
 <% include partials/header %>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
 <style type="text/css">
     .tab{
     width:100% !important;
@@ -30,8 +35,11 @@
 </style>
 <center>
 <div class="container try">
+  <div class="row" align="right">
+    <a style="color:#486AA5;font-size:20px" href="javascript:goBack();"><< Back</a> 
+  </div>
       <div class="row">
-      <div class="col-md-12   ">
+        <div class="col-md-12   ">
           <br>
       </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " >
