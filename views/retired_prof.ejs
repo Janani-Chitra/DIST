@@ -1,0 +1,80 @@
+<% include partials/header %>
+<style type=text/css>
+.tab{
+    width:80% !important;
+}
+.hod{
+    
+}
+.nam{
+    text-transform:uppercase;
+}
+.tab td{
+    font-size : 17px;
+    font-family: 'Noto Serif', serif;
+}
+.tab th{
+    text-align:center;
+    font-size : 20px;
+}
+.image
+{
+    width: 100px;
+    height: 120px;
+}
+</style>
+ <section class="text-center">          
+            <div>
+             <h2 RETIRED FACULTIES</h2>
+            <h4>IST Department</h4>
+           </div>
+           <center>
+             <hr id="line" width="25%", align="left"  style="padding-bottom: 2%">
+           </center> 
+           
+</section>
+<% if(1) {%> 
+  <table class="table  table-hover table-striped tab" align="center"  >
+      
+      <tr>
+          <th class="pink"  colspan="4" >
+         RETIRED PROFESSORS 
+         </th>
+      </tr>
+      
+         <%c=0; for(var i=0;i<data.length;i++){ %>
+             <% if(data[i].designation == 'Retired Professor'){c++;%>
+               <%if(c%2 !=0){ %>
+                 <tr >
+               <td width="25%" height="15%" align="middle" valign="middle"><img  src="/images/upload_images/<%= data[i].image %>" class="img-thumbnail rounded image"></td>
+               <td width="400" >
+               <span style="color:black">Name :<span class="nam"><%= data[i].name %></span><br>
+                    Experience : <%= data[i].experience %> years <br>
+                    Contact_No: <%= data[i].mobile_no %><br>
+                    Email: <%= data[i].email %><br>
+                </span>
+               <a href="/staffs_pro/<%= data[i].id%>"><u><em style=" font-size : 16px;">View More </em></u></a>
+               
+               </td>
+               <% }%>
+               <%if(c%2 ==0){ %>
+                <td width="25%" height="15%" align="middle" valign="middle"><img  src="/images/upload_images/<%= data[i].image %>" class="img-thumbnail rounded image"></td>
+               <td width="400" >
+               <span style="color:black">Name :<span class="nam"><%= data[i].name %></span><br>
+                    Experience : <%= data[i].experience %> years <br>
+                    Contact_No: <%= data[i].mobile_no %><br>
+                    Email: <%= data[i].email %><br>
+                </span>
+               <a href="/staffs_pro/<%= data[i].id%>"><u><em style=" font-size : 16px;">View More </em></u></a>
+               
+               </td>
+           </tr>
+           <% }%>
+         <% } }%> 
+       <% if(c==0){%>
+           <tr class="white"><td> none</td></tr>
+         <% } %>
+  </table>
+ <% } %>
+ 
+ <% include partials/footer %>

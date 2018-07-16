@@ -114,6 +114,12 @@ app.get("/teaching/:id",function(req,res){
     });
     
 });
+app.get("/retired_prof",function(req,res){
+    var query="select * from people where designation='Retired Professor'";
+    connection.query(query,function(err, results) {
+      res.render("retired_prof",{data:results});        
+    })
+})
 app.get("/VM",function(req, res) {
     res.render("VM");
 })
