@@ -1,0 +1,225 @@
+<html>
+<head>
+<title>Anna University</title>
+<style type="text/css">
+body{
+	margin: 10px;
+	font-size: 150%;
+}
+.h4 p{
+    margin: auto 0;
+    padding:0;
+	font-size: 200px;
+}
+table {
+    width: 90%;
+	float: center;
+	padding: 0;
+}
+table td{
+	font-size: 120%;
+}
+#logo{
+	width: 20%;
+	height: 200px;
+	float:left;
+	margin-top: 30px;
+	margin-left: 60px;
+}
+#side{
+	width:70%;
+	float:right;
+	height: 100px;
+}
+#index{
+	float: center;
+	margin:auto 0;
+}
+#page{
+	margin: 20px;
+	margin-left: 10px;
+}
+#datentime{
+	width: 45%;
+	float: left;
+}
+#sign1{
+	width: 45%;
+	float: right;
+}
+#sign2{
+	width: 45%;
+	float: left;
+}
+#sign3{
+	width: 45%;
+	float: right;
+}
+.copyright{
+	width: 100%;
+	padding:1em 0;
+	text-align:left;
+	border-top:none;
+}
+</style>
+<script language="javascript" type="text/javascript" src="script.js"></script>
+<script type="text/javascript">
+window.onload = function () {
+    var url = document.location.href,
+        params = url.split('?')[1].split('&'),
+        data = {}, tmp;
+    for (var i = 0, l = params.length; i < l; i++) {
+         tmp = params[i].split('=');
+         data[tmp[0]] = tmp[1];
+    }
+    document.getElementById('here').innerHTML = data.name;
+}
+</script>
+<style media="print">
+@page {
+	size: A4 portrait;
+	margin: 0;
+}
+</style>
+
+</head>
+<body onload="window.print()" oncontextmenu="return false">
+	<br /><br />
+	<div id="page">
+	<div id="logo">
+			<img src="aublack.jpg"></img>
+		</div>
+		<h3><center>Two Days National Workshop on</center></h3>
+		<h2><center>"UNMANNED AND AUTONOMOUS VEHICLES"</center></h2>
+		<p><center>8<sup>th</sup> and 9<sup>th</sup> September 2018<br/>
+			UNMANNED & AUTONOMOUS SYSTEMS (UAS) LABORATORY </center>
+			<center>Department of Information Science and Technology<br />
+				CEG, Anna University, Chennai</center></p>
+		<div id="index">
+			<hr>
+			<div id="tabler">
+			<div style="margin-left : 950px; width:100%; float: right; position: absolute;">
+					<div style="width:150px; height:180px; border:1px solid #000; "><br />
+						<p style="font-size: 65%!important;">
+						<center>Affix your recent photograph with self attestation.</center></p>
+					</div>
+				</div>
+				<center><h4>Application Form</h4></center>
+				
+					<table align="center">
+						<col width="100">
+						<col width="80">
+						<tr>
+							<td><p>Name </p></td>
+							<td><p><b id="name">name</b></p></td>
+						</tr>
+						<tr>
+							<td><p>Register Number</p></td>
+							<td><p id="regno">number</p></td>
+						</tr>
+						<tr>
+							<td><p>Semester</p></td>
+							<td><p id="sem">sem</p></td>
+						</tr>
+						<tr>
+							<td><p>Branch</p></td>
+							<td><p id="bran">branch</p></td>
+						</tr>
+						<tr>
+							<td><p>Course</p></td>
+							<td><p id="cou">course</p></td>
+						</tr>
+						<tr>
+							<td><p>College Name</p></td>
+							<td><p id="clg">college</p></td>
+						</tr>
+						<tr>
+							<td><p>College Address</p></td>
+							<td><p id="clgadd">Address</p></td>
+						</tr>
+						<tr>
+							<td><p>Mobile Number</p></td>
+							<td><p id="mob">mobile</p></td>
+						</tr>
+						<tr>
+							<td><p>E-Mail </p></td>
+							<td><p id="email">email</p></td>
+						</tr>
+						<tr>
+							<td><p>Why do you want to attend the workshop?</p></td>
+							<td><p id="ans">Response</p></td>
+						</tr>
+					</table>
+				</div>
+				
+				<center><h5><b>Declaration</b></h5><p>I hereby declare that all the above information are true and correct to the best of my knowledge.</p></center>
+				<div id="datentime">
+					<p align="left" style="margin-left: 30px">Date  : <br>Place :</p>
+				</div>
+			</div>
+			<p align="right" style="margin-right: 30px"> Yours Sincerely,<br /><br /><br /><br />
+			(Signature)<br /><b id="sign">sign</b></p>
+			<br /><br />
+			<div id="sign2">
+				<p align="left" style="margin-left: 30px"> <br /><br/>
+					Signature of the HOD<br />(Name with seal)<br/></p>
+			</div>
+			<div id="sign3">
+				<p align="right" style="margin-right: 30px"> <br /><br/>
+					Signature of Head of the Institution<br />(Name with seal)<br /></p>
+			</div>
+			<br /><br /><br /><br /><br /><br/><br/>
+			<div class="copyright">
+				<p><br/></br>*Selected candidates should submit the original Application form and Demand Draft.</p>
+				<hr>
+				<p>For Office Use only.</p>
+			</div>
+		</div>
+		<script>
+					function getParams(){
+					var idx = document.URL.indexOf('?');
+					var params = new Array();
+					if (idx != -1) {
+						var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+						for (var i=0; i<pairs.length; i++){
+							nameVal = pairs[i].split('=');
+							params[nameVal[0]] = nameVal[1];
+						}
+					}
+					return params;
+				}
+				var chars = {'+':' '};
+				params = getParams();
+				name = unescape(params["name"]);
+				name = name.replace(/[+]/g, m => chars[m]);
+				regno = unescape(params["regno"]);
+				sem = unescape(params["sem"]);
+				sem = sem.replace('3','III');
+				sem = sem.replace('5','V');
+				sem = sem.replace('7','VII');
+				bran = unescape(params["bran"]);
+				bran = bran.replace(/[+]/g, m => chars[m]);
+				cou = unescape(params["cou"]);
+				clg = unescape(params["clg"]);
+				clg = clg.replace(/[+]/g, m => chars[m]);
+				clgadd = unescape(params["clgadd"]);
+				clgadd = clgadd.replace(/[+]/g, m => chars[m]);
+				mob = unescape(params["mob"]);
+				email= unescape(params["email"]);
+				ans = unescape(params["ans"]);
+				ans = ans.replace(/[+]/g, m => chars[m]);
+				
+				document.getElementById('name').innerHTML=name;
+				document.getElementById('regno').innerHTML=regno;
+				document.getElementById('sem').innerHTML=sem;
+				document.getElementById('bran').innerHTML=bran;
+				document.getElementById('cou').innerHTML=cou;
+				document.getElementById('clg').innerHTML=clg;
+				document.getElementById('clgadd').innerHTML=clgadd;
+				document.getElementById('mob').innerHTML=mob;
+				document.getElementById('email').innerHTML=email;
+				document.getElementById('ans').innerHTML=ans;
+				document.getElementById('sign').innerHTML=name;
+        </script>
+</body>
+</html>
