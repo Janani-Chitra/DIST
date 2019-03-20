@@ -109,7 +109,7 @@ app.get("/teaching/:id",function(req,res){
     var id=req.params.id;
     var query="select * from people order by staff_order";
     connection.query(query,function(err,results){
-        //console.log(results);
+        console.log(results);
         res.render("teaching",{data: results,mes:id});
     });
     
@@ -411,7 +411,7 @@ app.get("/tl",function(req, res) {
 })
 
 
-app.listen(80,function()
+app.listen(8080,function()
 {
     console.log("ser running");
 });
