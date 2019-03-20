@@ -107,12 +107,9 @@ app.get("/nonteaching",function(req,res){
 
 app.get("/teaching/:id",function(req,res){
     var id=req.params.id;
-    var query="select * from people";
+    var query="select * from people order by staff_order";
     connection.query(query,function(err,results){
-        console.log(results);
-        console.log("helllllllllllllllllllllllllllloooooooooooooooooooooo");
-        console.log(err);
-        res.render("teaching",{data: results,mes:id});
+         res.render("teaching",{data: results,mes:id});
     });
     
 });
