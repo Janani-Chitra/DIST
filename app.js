@@ -107,7 +107,7 @@ app.get("/nonteaching",function(req,res){
 
 app.get("/teaching/:id",function(req,res){
     var id=req.params.id;
-    var query="select * from people order by staff_order";
+    var query="select * from people";
     connection.query(query,function(err,results){
         console.log(results);
         console.log("helllllllllllllllllllllllllllloooooooooooooooooooooo");
