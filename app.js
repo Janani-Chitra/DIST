@@ -111,6 +111,7 @@ app.get("/teaching/:id",function(req,res){
     connection.query(query,function(err,results){
         console.log(results);
         console.log("helllllllllllllllllllllllllllloooooooooooooooooooooo");
+        console.log(err);
         res.render("teaching",{data: results,mes:id});
     });
     
