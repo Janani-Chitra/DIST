@@ -410,7 +410,7 @@ app.get("/tl",function(req, res) {
 })
 
 
-app.listen(8080,function()
+app.listen(80,function()
 {
     console.log("ser running");
 });
