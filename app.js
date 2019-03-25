@@ -409,7 +409,9 @@ app.get("/tl",function(req, res) {
     });
 })
 
-
+app.get("/tip2k19",function(req,res){
+    res.render("tip2k19");
+})
 app.listen(80,function()
 {
     console.log("ser running");
