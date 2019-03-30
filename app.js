@@ -20,9 +20,14 @@ var Gallery = require('express-photo-gallery');
 var options = {
   title: 'IST Photo Gallery'
 };
+var options1={
+    title: 'TIP 2019 Photo Gallery'
+}
+ 
  
    app.use('/photos', Gallery('path_to_photos', options));
      app.use('/ICIITPhotoGallery', Gallery('ICIITGallery', options));
+     app.use("/tip2k19",Gallery('TIP2K19',options1));
 	
 var connection = mysql.createConnection({
 	host     : 'localhost',
